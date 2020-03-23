@@ -36,5 +36,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
     }
+
+    @IBAction func openHelper(_ sender: NSButton) {
+        guard let url = Bundle.main.url(forAuxiliaryExecutable: "XPCTest Helper.app") else {
+            return
+        }
+
+        NSWorkspace.shared.open(url)
+    }
 }
 

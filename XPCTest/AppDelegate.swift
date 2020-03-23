@@ -10,9 +10,8 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-    @IBOutlet weak var window: NSWindow!
-
+    @IBOutlet var window: NSWindow!
+    @IBOutlet var textField: NSTextField!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
@@ -22,6 +21,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
+    @IBAction func uppercase(_ sender: NSButton) {
+        let connection = NSXPCConnection(serviceName: "is.dave.TrampolineXPC")
+        connection.remoteObjectInterface = NSXPCInterface(with: TrampolineXPCProtocol.self)
+        connection.resume()
 
+        let service = connection.remoteObjectProxyWithErrorHandler { error in
+            print("Received error:", error)
+        } as? TrampolineXPCProtocol
+
+        service?.upperCaseString(textField.stringValue) { response in
+            DispatchQueue.main.async {
+                self.textField.stringValue = response
+            }
+        }
+    }
 }
 

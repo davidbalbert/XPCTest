@@ -10,7 +10,37 @@
 		630F0D8A242824BE006DF3D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630F0D89242824BE006DF3D6 /* AppDelegate.swift */; };
 		630F0D8C242824C0006DF3D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 630F0D8B242824C0006DF3D6 /* Assets.xcassets */; };
 		630F0D8F242824C0006DF3D6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630F0D8D242824C0006DF3D6 /* MainMenu.xib */; };
+		630F0DBA242825E8006DF3D6 /* TrampolineXPC.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 630F0DAF242825E8006DF3D6 /* TrampolineXPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		630F0DBF24282618006DF3D6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630F0DBE24282618006DF3D6 /* main.swift */; };
+		630F0DC1242826FB006DF3D6 /* ServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630F0DC0242826FB006DF3D6 /* ServiceDelegate.swift */; };
+		630F0DC324282888006DF3D6 /* TrampolineXPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630F0DC224282888006DF3D6 /* TrampolineXPC.swift */; };
+		630F0DC724283C11006DF3D6 /* TrampolineXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630F0DC42428399E006DF3D6 /* TrampolineXPCProtocol.swift */; };
+		630F0DC824283D6A006DF3D6 /* TrampolineXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630F0DC42428399E006DF3D6 /* TrampolineXPCProtocol.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		630F0DB8242825E8006DF3D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 630F0D7E242824BE006DF3D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 630F0DAE242825E8006DF3D6;
+			remoteInfo = TrampolineXPC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		630F0DAA24282537006DF3D6 /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				630F0DBA242825E8006DF3D6 /* TrampolineXPC.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		630F0D86242824BE006DF3D6 /* XPCTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPCTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +49,23 @@
 		630F0D8E242824C0006DF3D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		630F0D90242824C0006DF3D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		630F0D91242824C0006DF3D6 /* XPCTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XPCTest.entitlements; sourceTree = "<group>"; };
+		630F0DAF242825E8006DF3D6 /* TrampolineXPC.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = TrampolineXPC.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		630F0DB7242825E8006DF3D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		630F0DBE24282618006DF3D6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		630F0DC0242826FB006DF3D6 /* ServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDelegate.swift; sourceTree = "<group>"; };
+		630F0DC224282888006DF3D6 /* TrampolineXPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrampolineXPC.swift; sourceTree = "<group>"; };
+		630F0DC42428399E006DF3D6 /* TrampolineXPCProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrampolineXPCProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		630F0D83242824BE006DF3D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		630F0DAC242825E8006DF3D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,7 +78,9 @@
 		630F0D7D242824BE006DF3D6 = {
 			isa = PBXGroup;
 			children = (
+				630F0DC624283BF7006DF3D6 /* Common */,
 				630F0D88242824BE006DF3D6 /* XPCTest */,
+				630F0DB0242825E8006DF3D6 /* TrampolineXPC */,
 				630F0D87242824BE006DF3D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				630F0D86242824BE006DF3D6 /* XPCTest.app */,
+				630F0DAF242825E8006DF3D6 /* TrampolineXPC.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +106,25 @@
 			path = XPCTest;
 			sourceTree = "<group>";
 		};
+		630F0DB0242825E8006DF3D6 /* TrampolineXPC */ = {
+			isa = PBXGroup;
+			children = (
+				630F0DC0242826FB006DF3D6 /* ServiceDelegate.swift */,
+				630F0DC224282888006DF3D6 /* TrampolineXPC.swift */,
+				630F0DBE24282618006DF3D6 /* main.swift */,
+				630F0DB7242825E8006DF3D6 /* Info.plist */,
+			);
+			path = TrampolineXPC;
+			sourceTree = "<group>";
+		};
+		630F0DC624283BF7006DF3D6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				630F0DC42428399E006DF3D6 /* TrampolineXPCProtocol.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -70,15 +135,34 @@
 				630F0D82242824BE006DF3D6 /* Sources */,
 				630F0D83242824BE006DF3D6 /* Frameworks */,
 				630F0D84242824BE006DF3D6 /* Resources */,
+				630F0DAA24282537006DF3D6 /* Embed XPC Services */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				630F0DB9242825E8006DF3D6 /* PBXTargetDependency */,
 			);
 			name = XPCTest;
 			productName = XPCTest;
 			productReference = 630F0D86242824BE006DF3D6 /* XPCTest.app */;
 			productType = "com.apple.product-type.application";
+		};
+		630F0DAE242825E8006DF3D6 /* TrampolineXPC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 630F0DBB242825E8006DF3D6 /* Build configuration list for PBXNativeTarget "TrampolineXPC" */;
+			buildPhases = (
+				630F0DAB242825E8006DF3D6 /* Sources */,
+				630F0DAC242825E8006DF3D6 /* Frameworks */,
+				630F0DAD242825E8006DF3D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrampolineXPC;
+			productName = TrampolineXPC;
+			productReference = 630F0DAF242825E8006DF3D6 /* TrampolineXPC.xpc */;
+			productType = "com.apple.product-type.xpc-service";
 		};
 /* End PBXNativeTarget section */
 
@@ -92,6 +176,10 @@
 				TargetAttributes = {
 					630F0D85242824BE006DF3D6 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					630F0DAE242825E8006DF3D6 = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -109,6 +197,7 @@
 			projectRoot = "";
 			targets = (
 				630F0D85242824BE006DF3D6 /* XPCTest */,
+				630F0DAE242825E8006DF3D6 /* TrampolineXPC */,
 			);
 		};
 /* End PBXProject section */
@@ -123,6 +212,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		630F0DAD242825E8006DF3D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -130,11 +226,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630F0DC724283C11006DF3D6 /* TrampolineXPCProtocol.swift in Sources */,
 				630F0D8A242824BE006DF3D6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		630F0DAB242825E8006DF3D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				630F0DC1242826FB006DF3D6 /* ServiceDelegate.swift in Sources */,
+				630F0DC324282888006DF3D6 /* TrampolineXPC.swift in Sources */,
+				630F0DC824283D6A006DF3D6 /* TrampolineXPCProtocol.swift in Sources */,
+				630F0DBF24282618006DF3D6 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		630F0DB9242825E8006DF3D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 630F0DAE242825E8006DF3D6 /* TrampolineXPC */;
+			targetProxy = 630F0DB8242825E8006DF3D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		630F0D8D242824C0006DF3D6 /* MainMenu.xib */ = {
@@ -264,6 +380,7 @@
 		630F0D95242824C0006DF3D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = XPCTest/XPCTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -284,6 +401,7 @@
 		630F0D96242824C0006DF3D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = XPCTest/XPCTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +415,49 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = is.dave.XPCTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		630F0DBC242825E8006DF3D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9K689XE65M;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = TrampolineXPC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = is.dave.TrampolineXPC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		630F0DBD242825E8006DF3D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9K689XE65M;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = TrampolineXPC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = is.dave.TrampolineXPC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -318,6 +479,15 @@
 			buildConfigurations = (
 				630F0D95242824C0006DF3D6 /* Debug */,
 				630F0D96242824C0006DF3D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		630F0DBB242825E8006DF3D6 /* Build configuration list for PBXNativeTarget "TrampolineXPC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				630F0DBC242825E8006DF3D6 /* Debug */,
+				630F0DBD242825E8006DF3D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
